@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abb&eacute; Home Lab</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #999;
+            --accent: #ff9100; /* Dein Orange */
+            --hover-bg: #252525;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: calc(100vh - 80px);
+        }
+
+        /* Header Bereich */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        h1 {
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        h1 span { color: var(--accent); }
+        
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 0;
+        }
+
+        /* Das Grid für die Karten */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        /* Die einzelne Karte */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 25px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            background-color: var(--hover-bg);
+            border-color: var(--accent);
+            box-shadow: 0 8px 15px rgba(255, 145, 0, 0.15); /* Orangener Glow */
+        }
+
+        /* Icons (Emoji oder SVG) */
+        .icon {
+            font-size: 2.5rem;
+            margin-right: 20px;
+            width: 50px;
+            text-align: center;
+        }
+
+        .info h2 {
+            margin: 0 0 5px 0;
+            font-size: 1.2rem;
+        }
+
+        .info p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: auto;
+            padding-top: 50px;
+            color: #444;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Synology Abb&eacute; <span>Home Lab</span></h1>
+        <p class="subtitle">Zentraler Zugangspunkt</p>
+    </header>
+
+    <div class="grid">
+        
+        <a href="https://wiki.syn.abbe.de" class="card" target="_blank">
+            <div class="icon">📚</div>
+            <div class="info">
+                <h2>Wissensdatenbank</h2>
+                <p>Anleitungen, VPN & Netzwerk</p>
+            </div>
+        </a>
+
+        <a href="https://syn.abbe.de:24109/" class="card" target="_blank">
+            <div class="icon">⚙️</div>
+            <div class="info">
+                <h2>Synology Interface</h2>
+                <p>Verwaltung & Zugriff</p>
+            </div>
+        </a>
+
+        <a href="http://fritz.box" class="card" target="_blank">
+            <div class="icon">📡</div>
+            <div class="info">
+                <h2>Fritz!Box</h2>
+                <p>Router & Internet Status</p>
+            </div>
+        </a>
+
+        <a href="https://homebridge.syn.abbe.de" class="card" target="_blank">
+            <div class="icon">🏠</div>
+            <div class="info">
+                <h2>Homebridge</h2>
+                <p>Apple HomeKit Integration</p>
+            </div>
+        </a>
+
+        </div>
+
+    <footer>
+        &copy; 2026 Abbe Network | Protected via WireGuard
+    </footer>
+
+</body>
+</html>
